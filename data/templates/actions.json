@@ -1,0 +1,11 @@
+{
+    "set-global-var": {"action": "set-global-var", "name": "?", "value": "?", "condition":{}},
+    "set-prop-active": {"action": "set-prop-active", "active": "?", "condition":{}},
+    "set-scale": {"action": "set-scale", "scale": "?", "condition":{}},
+    "show-message": {"action": "show-message", "message": "?", "condition": {}},
+
+    "unlock-door": {"action": "unlock-door", "name": "?", "condition":{}},
+    "use-door": {"action": "use-door", "name": "?", "condition":{}},
+    "set-sprite": {"action": "set-sprite", "src": "?", "condition":{}}, 
+    "custom-action": {"action": "custom-action", "script":"./scripts/script.py", "condition":{}}
+}

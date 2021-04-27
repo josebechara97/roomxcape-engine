@@ -1,0 +1,30 @@
+# 1- in this project you will find two example projects and template for each element of how a  project is composed
+
+# 2- everything in the json are either string, jsonobject, jsonarrays, or stringsarrays, no numbers of booleans are used. 
+
+# 3- when variables are used on conditions, you must include whether is a instance.varname room.varname, game.varname (this are shared across)
+
+# 4- a file is composed as assembled a project.json file, see for instance (./templates/hotel-escape/project.json)
+    > game
+        ...some info about the game (see template of a door at ./templates/games.json)
+        > array of rooms (see template of a door at ./templates/rooms.json)
+            ... some info about the room 
+            > array of props (see ./templates/props.json)
+                ... some info about the prop
+                    array of events (see ./templates/events.json)
+                        ...some info
+                            array of actions (see ./templates/actions.json)
+                                ...some info
+                                    array of conditions (see ./templates/conditions.json)
+        > array of doors (see template of a door at ./templates/doors.json)
+
+
+# 5- additionally you will notice some extra directories and or file per project 
+> sprites
+> sprites.json // for resource management of sprite paths
+> scripts
+> scripts.json // for resource management
+> sounds
+> sounds.json // for resource management of sound paths       
+
+More to be explained later, but I suggest you try building your own project by copy pasting templates

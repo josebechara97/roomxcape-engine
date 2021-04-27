@@ -1,0 +1,9 @@
+{
+    "door":{
+        "door": "?", 
+        "locked": "false",
+        "from": "?", 
+        "to": "?",
+        "bidirectional": "true"
+    }
+}

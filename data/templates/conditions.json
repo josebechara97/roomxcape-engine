@@ -1,0 +1,13 @@
+{
+    "equals":{"condition": "equals", "value1":"?", "value2":"?"}, 
+    "and":{"condition": "and", "condition1":{}, "condition2":{}},
+    "or":{"condition": "or", "condition1":{}, "condition2":{}},    
+    "less-than":{"condition": "less-than", "value1":"?", "value2":"?"},
+    "bigger-than":{"condition": "bigger-than", "value1":"?", "value2":"?"},
+    "less-than-or-equal":{"condition": "less-than-or-equal", "value1":"?", "value2":"?"},
+    "bigger-than-or-equal":{"condition": "bigger-than-or-equal", "value1":"?", "value2":"?"},
+    "not":{"condition": "not", "condition1":{}},
+    
+    "global-var-exists":{"condition": "global-var-exits", "name":"?"}, 
+    "room-var-exists":{"condition": "room-var-exists", "name":"?"}
+}

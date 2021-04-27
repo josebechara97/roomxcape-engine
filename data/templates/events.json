@@ -1,0 +1,6 @@
+{
+    "on-object-clicked": {"event": "on-object-clicked","actions":[]},
+    "per-frame": {"event": "per-frame", "actions":[]}, 
+    
+    "on-room-start": {"event": "on-room-start", "actions":[]}
+}

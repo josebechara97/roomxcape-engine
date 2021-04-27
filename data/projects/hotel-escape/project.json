@@ -1,0 +1,434 @@
+{
+  "game": "hotel-escape",
+  "starting-room": "lobby",
+  "rooms": [
+    {
+      "room": "lobby",
+      "props": [
+        {
+          "prop": "background",
+          "sprite": "lobby-background.png",
+          "position": ["50%", "50%"],
+          "scale": "100%",
+          "events": []
+        },
+        {
+          "prop": "door",
+          "sprite": "door.png",
+          "position": ["50%", "42.5%"],
+          "scale": "20%",
+          "events": [
+            {
+              "event": "on-object-clicked",
+              "actions": [
+                {
+                  "action": "go-to-room",
+                  "room": "hall",
+                  "condition": {
+                    "condition": "equals",
+                    "value1": "door1key",
+                    "value2": "true"
+                  }
+                },
+                {
+                  "action": "show-message",
+                  "message": "you don't have the key to the hall yet!",
+                  "condition": {
+                    "condition": "not",
+                    "condition1": {
+                      "condition": "equals",
+                      "value1": "door1key",
+                      "value2": "true"
+                    }
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "prop": "doorman",
+          "sprite": "doorman.png",
+          "position": ["70%", "42.5%"],
+          "scale": "20%",
+          "events": [
+            {
+              "event": "on-object-clicked",
+              "actions": [
+                {
+                  "action": "show-message",
+                  "message": "welcome, you are not escaping, there is only one open window in the whole hotel hahaha",
+                  "condition": {}
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "prop": "key",
+          "sprite": "key.png",
+          "position": ["50%", "60%"],
+          "scale": "5%",
+          "events": [
+            {
+              "event": "on-object-clicked",
+              "actions": [
+                { "action": "unlock-door", "name": "door1", "condition": {} },
+                {
+                  "action": "set-global-var",
+                  "name": "door1key",
+                  "value": "true",
+                  "condition": {}
+                },
+                {
+                  "action": "set-prop-active",
+                  "active": "false",
+                  "condition": {}
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "room": "hall",
+      "props": [
+        {
+          "prop": "hall-background",
+          "sprite": "hall.png",
+          "position": ["50%", "50%"],
+          "scale": "100%",
+          "events": []
+        },
+        {
+          "prop": "room1door",
+          "sprite": "door.png",
+          "position": ["25%", "42.5%"],
+          "scale": "20%",
+          "events": [
+            {
+              "event": "on-object-clicked",
+              "actions": [
+                {
+                  "action": "go-to-room",
+                  "room": "room1",
+                  "condition": {
+                    "condition": "equals",
+                    "value1": "room1key",
+                    "value2": "true"
+                  }
+                },
+                {
+                  "action": "show-message",
+                  "message": "you don't have the key to the room 1 yet!",
+                  "condition": {
+                    "condition": "not",
+                    "condition1": {
+                      "condition": "equals",
+                      "value1": "room1key",
+                      "value2": "true"
+                    }
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "prop": "room2door",
+          "sprite": "door.png",
+          "position": ["50%", "42.5%"],
+          "scale": "20%",
+          "events": [
+            {
+              "event": "on-object-clicked",
+              "actions": [
+                {
+                  "action": "go-to-room",
+                  "room": "room2",
+                  "condition": {
+                    "condition": "equals",
+                    "value1": "room2key",
+                    "value2": "true"
+                  }
+                },
+                {
+                  "action": "show-message",
+                  "message": "you don't have the key to the room 2 yet!",
+                  "condition": {
+                    "condition": "not",
+                    "condition1": {
+                      "condition": "equals",
+                      "value1": "room2key",
+                      "value2": "true"
+                    }
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "prop": "room3door",
+          "sprite": "door.png",
+          "position": ["75%", "42.5%"],
+          "scale": "20%",
+          "events": [
+            {
+              "event": "on-object-clicked",
+              "actions": [
+                {
+                  "action": "go-to-room",
+                  "room": "room3",
+                  "condition": {}
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "prop": "old-guy",
+          "sprite": "old-guy.png",
+          "position": ["80%", "80%"],
+          "scale": "20%",
+          "events": [
+            {
+              "event": "on-object-clicked",
+              "actions": [
+                {
+                  "action": "show-message",
+                  "message": "I can't find the key to my room since I went for lunch!"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "prop": "back",
+          "sprite": "back.png",
+          "position": ["50%", "90%"],
+          "scale": "20%",
+          "events": [
+            {
+              "event": "on-object-clicked",
+              "actions": [
+                {
+                  "action": "go-to-room",
+                  "room": "lobby",
+                  "condition": {}
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "room": "room3",
+      "props": [
+        {
+          "prop": "background",
+          "sprite": "room3.png",
+          "position": ["50%", "50%"],
+          "scale": "100%",
+          "events": []
+        },
+        {
+          "prop": "back",
+          "sprite": "back.png",
+          "position": ["50%", "90%"],
+          "scale": "20%",
+          "events": [
+            {
+              "event": "on-object-clicked",
+              "actions": [
+                {
+                  "action": "go-to-room",
+                  "room": "hall",
+                  "condition": {}
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "prop": "table",
+          "sprite": "table.png",
+          "position": ["80%", "42.5%"],
+          "scale": "20%",
+          "events": [
+            {
+              "event": "on-object-clicked",
+              "actions": [
+                {
+                  "action": "show-message",
+                  "message": "there seems to be a lost item in here, its a key!",
+                  "condition": {
+                    "condition": "not",
+                    "condition1": {
+                      "condition": "equals",
+                      "value1": "room1key",
+                      "value2": "true"
+                    }
+                  }
+                },
+                {
+                  "action": "set-global-var",
+                  "name": "room1key",
+                  "value": "true"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "room": "room1",
+      "props": [
+        {
+          "prop": "background",
+          "sprite": "room2.png",
+          "position": ["50%", "50%"],
+          "scale": "100%"
+        },
+        {
+          "prop": "kid",
+          "sprite": "kid.png",
+          "position": ["50%", "50%"],
+          "scale": "20%",
+          "events": [
+            {
+              "event": "on-object-clicked",
+              "actions": [
+                {
+                  "action": "show-message",
+                  "message": "hello, are you looking for an open window? me too but mine is locked :(, try my parents room, I know they hid their key somewhere in here"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "prop": "dresser",
+          "sprite": "dresser.png",
+          "position": ["10%", "50%"],
+          "scale": "20%",
+          "events": [
+            {
+              "event": "on-object-clicked",
+              "actions": [
+                {
+                  "action": "show-message",
+                  "message": "there seems to be a hidden item in here, its a key!",
+                  "condition": {
+                    "condition": "not",
+                    "condition1": {
+                      "condition": "equals",
+                      "value1": "room2key",
+                      "value2": "true"
+                    }
+                  }
+                },
+                {
+                  "action": "set-global-var",
+                  "name": "room2key",
+                  "value": "true"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "prop": "back",
+          "sprite": "back.png",
+          "position": ["50%", "90%"],
+          "scale": "20%",
+          "events": [
+            {
+              "event": "on-object-clicked",
+              "actions": [
+                {
+                  "action": "go-to-room",
+                  "room": "hall",
+                  "condition": {}
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "room": "room2",
+      "props": [
+        {
+          "prop": "background",
+          "sprite": "final-room.png",
+          "position": ["50%", "50%"],
+          "scale": "100%"
+        },
+        {
+          "prop": "open-window",
+          "sprite": "open-window.png",
+          "position": ["50%", "30%"],
+          "scale": "20%",
+          "events": [
+            {
+              "event": "on-object-clicked",
+              "actions": [
+                {
+                  "action": "show-message",
+                  "message": "you just escaped the hotel! congratulations!"
+                },
+                {
+                  "action": "go-to-room",
+                  "room": "outside"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "prop": "back",
+          "sprite": "back.png",
+          "position": ["50%", "90%"],
+          "scale": "20%",
+          "events": [
+            {
+              "event": "on-object-clicked",
+              "actions": [
+                {
+                  "action": "go-to-room",
+                  "room": "hall",
+                  "condition": {}
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "room": "outside", 
+      "props":[
+        {
+          "prop": "background",
+          "sprite": "ending.png",
+          "position": ["50%", "50%"],
+          "scale": "100%"
+        }
+      ]
+    }
+  ],
+  "doors": [
+    {
+      "door": "door1",
+      "locked": "false",
+      "from": "lobby",
+      "to": "darkest-cellar",
+      "bidirectional": "false"
+    }
+  ]
+}
